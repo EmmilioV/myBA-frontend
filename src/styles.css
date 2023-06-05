@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+body {
+    height: 91vh;
+    background: linear-gradient(#020649, #0B0BB3, #762EB7);
+}
