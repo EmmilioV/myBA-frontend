@@ -5,19 +5,42 @@
 .welcome-message{
     color: white;
     text-align: center;
-    margin-top: 5%;
+    padding-top: 10%;
+}
+
+.initial-form{
+    display: flex;
+    color: azure;
+    place-content: center;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.input-user-id {
+    display: flex;
+    flex-direction: column;
+    text-align-last: center;
+    font-family: 'Courier New', Courier, monospace;
+    .span {
+        font-size: x-large;
+    }
+    .input {
+        font-size: larger;
+    }
 }
 
 .cards{
-    justify-content: space-between;
     display: flex;
-    margin: 10%;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-right: 22%;
+    margin-bottom: 0%;
+    margin-left: 22%;
 }
 
-.card{
-    width: 45%;
+.card {
+    width: 25%;
     display: flex;
-    align-content: space-around;
     background: linear-gradient(#656dc5,#03094e);
 }
 
@@ -27,4 +50,14 @@
 
 .card-title {
     color: beige;
+}
+
+.btn {
+    color: #bdc2f8;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.icon {
+    font-size: xx-large;
 }

@@ -1,19 +1,31 @@
 <div class="home-container">
-    <div class="home-content">
-        <h2 class="welcome-message">¡BIENVENIDO!</h2>
-        <div class="cards">
-            <div class="card">
-                <i class="bi bi-person-fill"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Soy empleador</h5>
-                    <a href="#" class="btn btn-primary">Ingresar</a>
+    <h2 class="welcome-message">¡BIENVENIDO!</h2>
+    <div>
+        <div class="initial-form">
+            <form [formGroup]="loginForm">
+                <div class="input-user-id">
+                    <span class="span"> Cedula: </span>
+                    <input class="input" placeholder="Ingrese su cedula" type="text" formControlName="userId"/>
                 </div>
-            </div>
-            <div class="card">
-                <i class="bi bi-person-fill-gear"></i>
-                <div class="card-body">
-                    <h5 class="card-title">Soy empleado</h5>
-                    <a routerLink="/employee" class="btn btn-primary">Ingresar</a>
+            </form>
+        </div>
+        <div class="home-content">
+            <div class="cards">
+                <div class="card">
+                    <i class="bi bi-person-fill icon"></i>
+                    <div class="card-body">
+                        <button class="btn" (click)="searchEmployerDataAndRedirect()">
+                            Soy empleador
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="bi bi-person-fill-gear icon"></i>
+                    <div class="card-body">    
+                        <button class="btn" (click)="searchEmployeeDataAndRedirect()">
+                            Soy empleado
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,22 @@
+.thead {
+    color: aliceblue;
+}
+
+.td-style {
+    background-color: rgb(31, 30, 37);
+    color: azure;
+}
+
+.employee-info {
+    font-size: 25px;
+    color: azure;
+}
+
+.return-button {
+    justify-content: center;
+    margin-left: 45%;
+}
+
+.table {
+    text-align: center;
+}

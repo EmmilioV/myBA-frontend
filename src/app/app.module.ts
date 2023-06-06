@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { RouterLink, RouterModule } from '@angular/router';
 import { EmployeeComponent } from './employee/employee.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,10 @@ import { EmployeeComponent } from './employee/employee.component';
     BrowserModule,
     AppRoutingModule,
     HomeComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
