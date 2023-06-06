@@ -2,6 +2,6 @@
 @import '~bootstrap-icons/font/bootstrap-icons.css';
 
 body {
-    height: 91vh;
+    height: 100vh;
     background: linear-gradient(#020649, #0B0BB3, #762EB7);
 }
