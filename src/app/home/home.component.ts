@@ -31,11 +31,11 @@ export class HomeComponent implements OnInit {
   }
 
   searchEmployeeDataAndRedirect() {
-    this.router.navigate(['employee'], {queryParams: {userId: this.id}})
+    this.router.navigate(['employee'], { queryParams: { userId: this.id } });
   }
 
   searchEmployerDataAndRedirect() {
-
+    this.router.navigate(['employer'], { queryParams: { userId: this.id } });
   }
 
   get id() {
