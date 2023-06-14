@@ -2,11 +2,11 @@ import { Observable, catchError, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { variables } from 'src/environments/environment';
-import { EmployerWithAppointments } from 'src/models/employer/EmployerWithAppointments.model';
+import { AppointmentWithServicesInfo } from 'src/models/appointments/appointment.model';
 
 @Injectable({ providedIn: 'root' })
-export class EmployerService {
-    private employerUrl = `${variables.backend_url}/v1/employer`;
+export class APpointmentService {
+    private appointmentUrl = `${variables.backend_url}/v1/appointment`;
 
     constructor(
         private http: HttpClient,
@@ -14,10 +14,10 @@ export class EmployerService {
         
     }
 
-    getEmployerWithAppointments(employerId: string): Observable<EmployerWithAppointments> {
-        return this.http.get<EmployerWithAppointments>(`${this.employerUrl}/appointment/all-by-me/${employerId}`)
+    getAppointmentWithServices(appointmentId: string): Observable<AppointmentWithServicesInfo> {
+        return this.http.get<AppointmentWithServicesInfo>(`${this.appointmentUrl}/with-services/${appointmentId}`)
         .pipe(
-            catchError(this.handleError<EmployerWithAppointments>())
+            catchError(this.handleError<AppointmentWithServicesInfo>())
         );
     }
 

@@ -1,0 +1,58 @@
+<div class="employee-table" *ngIf="showTable">
+    <div class="appointment-container">
+        <div class="appointment-info">
+            <span>Fecha: {{appointment.date_of}}</span>
+            <span>Cliente: {{appointment.customer_name}}</span>
+            <span>Duración total: {{appointment.total_duration}}</span>
+            <span>Costo total: ${{appointment.total_cost}}</span>
+        </div>
+        <button class="btn btn-primary"> Nuevo servicio </button>
+    </div>
+    <table class="table table-dark">
+        <thead class="thead">
+            <td>Id</td>
+            <td>Cedula del empleado</td>
+            <td>Tipo de servicio</td>
+            <td>Duracion (en horas)</td>
+            <td>Costo</td>
+            <td>¿Completada?</td>
+            <td>Observaciones</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let service of appointment.services">
+                <td class="td-style">
+                    {{service.service_id}}
+                </td>
+                <td>
+                    {{service.employee_id}}
+                </td>
+                <td class="td-style">
+                    {{service.type_of}}
+                </td>
+                <td>
+                    {{service.duration}}
+                </td>
+                <td class="td-style">
+                    ${{service.cost_of}}
+                </td>
+                <td>
+                    {{service.is_completed}}
+                </td>
+                <td class="td-style">
+                    {{service.observations}}
+                </td>
+                <td class="td-style actions">
+                    <button class="btn btn-primary">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="btn btn-primary">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<button class="btn btn-warning return-button" *ngIf="showTable" (click)="return()">
+    Regresar
+</button>

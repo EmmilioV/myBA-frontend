@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
-import { AbstractControl, FormArray, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { EmployerWithAppointments } from 'src/models/employer/EmployerWithAppointments.model';
 import { EmployerService } from 'src/services/employer.service';
 
@@ -10,6 +9,7 @@ import { EmployerService } from 'src/services/employer.service';
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule
   ],
   templateUrl: './appointment-administration.component.html',
   styleUrls: ['./appointment-administration.component.css']
@@ -22,8 +22,8 @@ export class AppointmentAdministrationComponent implements OnInit {
 	userId: string | null = "";
   
   constructor(
-		private fb: FormBuilder,
     private route: ActivatedRoute,
+    private router: Router,
 		private location: Location,
 		private employerHttp: EmployerService,
 	) {
@@ -53,12 +53,10 @@ export class AppointmentAdministrationComponent implements OnInit {
   
   removeAppointment(appointmentId: string) {
     console.log("ELIMINAR ", appointmentId);
-    
   }
 
   listAppointmentServices(appointmentId: string) {
-    console.log("LISTAR SERVICIOS ", appointmentId);
-    
+    this.router.navigate(["employer",this.userId,"admin-appointment-services",appointmentId]);
   }
 
 	return() {

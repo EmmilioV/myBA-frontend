@@ -32,6 +32,11 @@ const routes: Routes = [
     component: AppointmentAdministrationComponent,
     title: 'admin-appointments'
   },
+  {
+    path: 'employer/:userId/admin-appointment-services/:appointmentId',
+    component: ServiceAdministrationComponent,
+    title: 'admin-appointment-services'
+  },
 ];
 
 @NgModule({
