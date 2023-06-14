@@ -38,3 +38,23 @@
 .table {
     text-align: center;
 }
+
+.modal-title,
+.label-text-class {
+    color:  rgb(31, 30, 37);
+}
+
+.label-text-class {
+    margin-bottom: 2%;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+}
